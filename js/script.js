@@ -1030,42 +1030,42 @@ let promote = function(type){
                 black.king.checkedBy = newPiece;
             } 
         }
-  else{
-
-
-
-
-
-    if(newPiece.isValidMove(getSquare(white.king.x, white.king.y),2).valid){
-        showError("Check")
-        white.checked=true;
-    }
-    if(kingExposed(white.king)){
-        showError("Check")
-        white.checked=true;
-    }
-  }
-    nextTurn();
-}
+        else
+        {
+            /*if(isCheckmate(white.king)){
+                showError("Checkmate");
+                return;
+            }*/
+            if(newPiece.isValidMove(getSquare(white.king.x, white.king.y),2).valid){
+                showError("Check")
+                white.checked=true;
+            }
+            if(kingExposed(white.king)){
+                showError("Check")
+                white.checked=true;
+            }
+        }
+        nextTurn();
+	}
 };
 
 let kingExposed = function(at)
 {
-    for(let i=0; i<pieces.length;i++)
+    for(let i=0;i<pieces.length;i++)
     {
         let square = getSquare(pieces[i].x, pieces[i].y);
         if(pieces[i].color != at.color && pieces[i].captured==false)
         {
-            if(pieces[i] instanceof  Pawn)
+            if(pieces[i] instanceof Pawn)
             {
-                let diirection = pieces[i].color = "white" ? -1 : 1;
+                let direction = pieces[i].color == "white" ? -1 : 1;
                 let movementY = (at.y-pieces[i].y);
-                let movvementX = (at.x-piece[i].x);
+                let movementX = (at.x-pieces[i].x);
                 if(movementY == direction)
                 {
                     if(Math.abs(movementX) == 1)
                     {
-                        at.checkBy = pieces[i];
+                        at.checkedBy = pieces[i];
                         return true;
                     }
                 }
@@ -1073,7 +1073,7 @@ let kingExposed = function(at)
             else
             {
                 if(square.piece.isValidMove(getSquare(at.x, at.y)).valid){
-                    at.checkBy = pieces[i];
+                    at.checkedBy = pieces[i];
                     console.log(getSquare(at.x, at.y));
                     console.log(pieces[i]);
                     return true;
@@ -1086,11 +1086,15 @@ let kingExposed = function(at)
 
 let nextTurn = function(){
     turn++;
-    if(currentPlayer.color == "white"){
-        currentPlayer = black;
-        document.getElementById("turnInfo").innerHTML = "Player's turn: <b> Black </b>";
-    }else{
-        currentPlayer = white;
-        document.getElementById("turnInfo").inneHTML = "Player's turn: <b>White</b>";
-    }
+	if(currentPlayer.color == "white"){
+		currentPlayer = black;
+        document.getElementById("turnInfo").innerHTML = "Player's turn: <b>Black</b>";
+	}else{
+		currentPlayer = white;
+        document.getElementById("turnInfo").innerHTML = "Player's turn: <b>White</b>";
+	}
 }
+    
+
+    
+
