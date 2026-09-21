@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Chessmace</title>
+	
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body onload="setup();">
+
+<h1>Chessmace</h1>
+<p id="turnInfo">Player's turn: <b>White</b></p>
+<section id="board">
+    <div class="overlay" id="promotionMessage">
+        <div class="overlay-inner">
+            <span class="overlay-title">Promotion!</span>
+            <p class="overlay-text" id="alertText"></p>
+            <ul id="promotionList" class="white">
+                <li><a href="#" class="promotion-button queen" onclick="promote('queen');"></a></li>
+                <li><a href="#" class="promotion-button castle" onclick="promote('castle');"></a></li>
+                <li><a href="#" class="promotion-button bishop" onclick="promote('bishop');"></a></li>
+                <li><a href="#" class="promotion-button knight" onclick="promote('knight');"></a></li>
+            </ul>
+        </div>
+    </div>
+	<div class="overlay" id="errorMessage">
+		<div class="overlay-inner">
+			<span class="overlay-title">Error!</span>
+			<p class="overlay-text" id="errorText"></p>
+			<a href="#" class="overlay-button" onclick="closeError();">Close</a>
+		</div>
+	</div>
+	<div class="overlay" id="endMessage">
+		<div class="overlay-inner">
+			<span class="overlay-title">Game Over!</span>
+			<p class="overlay-text" id="endText"></p>
+			<a href="#" class="overlay-button" onclick="newGame();">New Game</a>
+		</div>
+	</div>
+<div data-x="1" data-y="1" class="square light  black-castle"></div><div data-x="2" data-y="1" class="square dark  black-knight"></div><div data-x="3" data-y="1" class="square light  black-bishop"></div><div data-x="4" data-y="1" class="square dark  black-queen"></div><div data-x="5" data-y="1" class="square light  black-king"></div><div data-x="6" data-y="1" class="square dark  black-bishop"></div><div data-x="7" data-y="1" class="square light  black-knight"></div><div data-x="8" data-y="1" class="square dark  black-castle"></div><div data-x="1" data-y="2" class="square dark  black-pawn"></div><div data-x="2" data-y="2" class="square light  black-pawn"></div><div data-x="3" data-y="2" class="square dark  black-pawn"></div><div data-x="4" data-y="2" class="square light  black-pawn"></div><div data-x="5" data-y="2" class="square dark  black-pawn"></div><div data-x="6" data-y="2" class="square light  black-pawn"></div><div data-x="7" data-y="2" class="square dark  black-pawn"></div><div data-x="8" data-y="2" class="square light  black-pawn"></div><div data-x="1" data-y="3" class="square light  empty"></div><div data-x="2" data-y="3" class="square dark  empty"></div><div data-x="3" data-y="3" class="square light  empty"></div><div data-x="4" data-y="3" class="square dark  empty"></div><div data-x="5" data-y="3" class="square light  empty"></div><div data-x="6" data-y="3" class="square dark  empty"></div><div data-x="7" data-y="3" class="square light  empty"></div><div data-x="8" data-y="3" class="square dark  empty"></div><div data-x="1" data-y="4" class="square dark  empty"></div><div data-x="2" data-y="4" class="square light  empty"></div><div data-x="3" data-y="4" class="square dark  empty"></div><div data-x="4" data-y="4" class="square light  empty"></div><div data-x="5" data-y="4" class="square dark  empty"></div><div data-x="6" data-y="4" class="square light  empty"></div><div data-x="7" data-y="4" class="square dark  empty"></div><div data-x="8" data-y="4" class="square light  empty"></div><div data-x="1" data-y="5" class="square light  empty"></div><div data-x="2" data-y="5" class="square dark  empty"></div><div data-x="3" data-y="5" class="square light  empty"></div><div data-x="4" data-y="5" class="square dark  empty"></div><div data-x="5" data-y="5" class="square light  empty"></div><div data-x="6" data-y="5" class="square dark  empty"></div><div data-x="7" data-y="5" class="square light  empty"></div><div data-x="8" data-y="5" class="square dark  empty"></div><div data-x="1" data-y="6" class="square dark  empty"></div><div data-x="2" data-y="6" class="square light  empty"></div><div data-x="3" data-y="6" class="square dark  empty"></div><div data-x="4" data-y="6" class="square light  empty"></div><div data-x="5" data-y="6" class="square dark  empty"></div><div data-x="6" data-y="6" class="square light  empty"></div><div data-x="7" data-y="6" class="square dark  empty"></div><div data-x="8" data-y="6" class="square light  empty"></div><div data-x="1" data-y="7" class="square light  white-pawn"></div><div data-x="2" data-y="7" class="square dark  white-pawn"></div><div data-x="3" data-y="7" class="square light  white-pawn"></div><div data-x="4" data-y="7" class="square dark  white-pawn"></div><div data-x="5" data-y="7" class="square light  white-pawn"></div><div data-x="6" data-y="7" class="square dark  white-pawn"></div><div data-x="7" data-y="7" class="square light  white-pawn"></div><div data-x="8" data-y="7" class="square dark  white-pawn"></div><div data-x="1" data-y="8" class="square dark  white-castle"></div><div data-x="2" data-y="8" class="square light  white-knight"></div><div data-x="3" data-y="8" class="square dark  white-bishop"></div><div data-x="4" data-y="8" class="square light  white-queen"></div><div data-x="5" data-y="8" class="square dark  white-king"></div><div data-x="6" data-y="8" class="square light  white-bishop"></div><div data-x="7" data-y="8" class="square dark  white-knight"></div><div data-x="8" data-y="8" class="square light  white-castle"></div></section>
+
+<script type="text/javascript" src="js/scripts.js"></script>
+
+
+</body></html>
