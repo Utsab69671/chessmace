@@ -1,67 +1,29 @@
 # chessmace
-ChessMace is a modern and interactive chess game designed to bring the classic game of chess into a clean and engaging digital experience. It provides a simple chessboard interface where players can enjoy matches, practice their moves, and improve their strategic thinking. The project focuses on smooth gameplay.
+Project Title
+  Chessmace:
+  Chessmace is a web based chess game especially focused to be played between two friends online.
 
-Features
- Interactive chess board
- Two-player gameplay
- Simple and clean interface
- Easy piece movement
- Responsive design
- Runs directly in the browser
- Custom styling with CSS
- Built using vanilla JavaScript
- Technologies Used
-HTML5 — Structure of the game
-CSS3 — Styling and layout
-JavaScript — Game logic and interactions
- Project Structure
-chessmace/
-│
-├── css/
-│   └── style.css
-│
-├── img/
-│   └── pieces.png
-│
-├── js/
-│   └── script.js
-│
-├── index.html
-├── README.md
-├── .gitignore
-└── .gitattributes
+Description:
+There are many app-based chess games so, at that type i thought of making web based chess game. Chessmace is made by the pure use of HTTML5, CSS and JS. It took me nearly 7 years to build. It has alert boxes if some moves are made beyond the rules.
 
+Getting Started:
 
-🕹️ How to Play
-Open the game in your browser.
-Start with the white pieces.
-Move your pieces using the game interface.
-Players take turns.
-Try to checkmate the opponent's king.
-Project Goal
+(Dependencies):
+A modern or new web-browser like  Chrome,Brave,Safari etc.
+Windows,Linux  or macos.
 
-The goal of ChessMate is to create a simple browser-based chess experience while practicing HTML, CSS, JavaScript, Git, and GitHub.
+Installing:
+You can clone the github repo and make changes if you think changes are required.
 
-* Future Improvements
+Helps:
 
-Possible future updates include:
+Check carefully that if the name of folders or file are changed.
+Check if the file script.js is inside js  folder
+Check if the file  style.css is inside css folder.
+Dont use Outdated browsers version.
+If you are using new versions but its not wroking than try refershing it.
 
-Check and checkmate detection
-Castling
-En passant
-Pawn promotion
-Move history
-Undo/redo
-Chess timer
-Sound effects
-Single-player mode with AI
+License:
 
-* Author
+This project is open-source, so you ccan use it.
 
-Utsab Pandey
-
-GitHub: Utsab69671
-
-() License
-
-This project is open source.
