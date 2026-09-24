@@ -3,7 +3,8 @@ Project Title
   Chessmace:
   Chessmace is a web based chess game especially focused to be played between two friends online.
 
-  Screenshot:
+  ## **Screenshot:**
+  
   ![alt text](demo4.png)
   
  ## **Alert box screenshot:**
@@ -13,7 +14,7 @@ Project Title
 ## **Description:**
 There are many app-based chess games so, at that type i thought of making web based chess game. Chessmace is made by the pure use of HTTML5, CSS and JS. It took me nearly 7 years to build. It has alert boxes if some moves are made beyond the rules.
 
-# tting Started:
+# Getting Started:
 
 ## (Dependencies):
 A modern or new web-browser like  Chrome,Brave,Safari etc.
